@@ -1,0 +1,33 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8090
+spring:
+
+#  autoconfigure:
+#    exclude:
+#        - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+#        - org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
+
+  application:
+    name: usermanagement
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/simbrella
+
+    username: postgres
+    password: 8599
+    jpa:
+      hibernate:
+        ddl-auto: update
+        database: postgresql
+        database-platform: org.hibernate.PostgeSQLDialect
+logging:
+  level:
+    org.springframework.security: DEBUG

@@ -1,0 +1,31 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+server:
+  port: 8091
+
+spring:
+  application:
+    name: loantxnlog
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/loan_db
+    username: postgres
+    password: 8599
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database: postgresql
+      database-platform: org.hibernate.PostgreSQLDialect
+
+logging:
+  level:
+    org.springframework.security: DEBUG
