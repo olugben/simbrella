@@ -1,2 +1,4 @@
 Jan 05, 2025 11:29:33 AM com.hammed.loanmanagement.services.LoanService logLoanApplicationDetails
 INFO: Loan Application: [User ID: 434, Amount: 100900.00, Tenure: 12 months, Interest Rate: 1.000000, Status: PENDING, Applied At: 2025-01-05T00:00, Updated At: 2025-01-05T00:00]
+Jan 05, 2025 11:31:05 AM com.hammed.loanmanagement.services.LoanService logLoanApplicationDetails
+INFO: Loan Application: [User ID: 434, Amount: 107887565564545455400.00, Tenure: 100 months, Interest Rate: 1.000000, Status: PENDING, Applied At: 2025-01-05T00:00, Updated At: 2025-01-05T00:00]
